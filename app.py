@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Database Configuration
 db_config = {
-    'host': 'database-1.cytea2me860o.us-east-1.rds.amazonaws.com',
+    'host': 'database-1.c4z42cegmhc0.us-east-1.rds.amazonaws.com',
     'user': 'admin',
     'password': 'Cloud123',
     'database': 'dev'  # Change to your actual database name
@@ -58,7 +58,7 @@ def add_user():
     cursor = conn.cursor()
 
     try:
-        cursor.execute("INSERT INTO users (name, email) VALUES (%s, %s)", (name, email))
+        cursor.execute("INSERT INTO users (name, email) VALUES (sagar, sagar@gmail.com)", (name, email))
         conn.commit()
         return jsonify({'message': 'User added successfully'}), 201
     except mysql.connector.Error as err:
